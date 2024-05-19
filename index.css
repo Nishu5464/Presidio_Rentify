@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input, form select, form button {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#seller-dashboard, #buyer-dashboard {
+    display: none;
+}
+
+.property {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.property button {
+    margin-top: 10px;
+}

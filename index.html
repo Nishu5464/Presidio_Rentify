@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Marketplace</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login/Register Form -->
+        <div id="login-register">
+            <h2>Login / Register</h2>
+            <form id="register-form">
+                <input type="text" id="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone-number" placeholder="Phone Number" required>
+                <select id="user-type">
+                    <option value="buyer">Buyer</option>
+                    <option value="seller">Seller</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Seller Dashboard -->
+        <div id="seller-dashboard" style="display: none;">
+            <h2>Seller Dashboard</h2>
+            <button onclick="showPostPropertyForm()">Post Property</button>
+            <div id="post-property-form" style="display: none;">
+                <h3>Post Property</h3>
+                <form id="property-form">
+                    <input type="text" id="place" placeholder="Place" required>
+                    <input type="text" id="area" placeholder="Area (sq ft)" required>
+                    <input type="number" id="bedrooms" placeholder="Number of Bedrooms" required>
+                    <input type="number" id="bathrooms" placeholder="Number of Bathrooms" required>
+                    <input type="text" id="nearby" placeholder="Nearby Hospitals & Colleges" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <h3>Your Properties</h3>
+            <div id="seller-properties"></div>
+        </div>
+
+        <!-- Buyer Dashboard -->
+        <div id="buyer-dashboard" style="display: none;">
+            <h2>Buyer Dashboard</h2>
+            <div id="filters">
+                <h3>Filters</h3>
+                <input type="text" id="filter-place" placeholder="Place">
+                <input type="number" id="filter-bedrooms" placeholder="Number of Bedrooms">
+                <input type="number" id="filter-bathrooms" placeholder="Number of Bathrooms">
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+            <h3>Available Properties</h3>
+            <div id="properties"></div>
+        </div>
+    </div>
+
+   <script src="script.js"></script> 
+</body>
+</html>
